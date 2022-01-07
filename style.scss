@@ -1,0 +1,261 @@
+$bgColor: hsl(226, 43%, 10%);
+$cardColor: hsl(235, 46%, 20%);
+$color: hsl(235, 45%, 61%);
+$color4: hsl(236, 100%, 87%);
+$profileColor: hsl(246, 80%, 60%);
+$activeCard: #34397b;
+
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$selfcare: hsl(43, 84%, 65%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+}
+body {
+  background-color: $bgColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 240px 240px 240px 240px;
+  grid-template-rows: 225px 225px;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+  width: 1440px;
+  margin: auto;
+}
+
+.profile {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: $cardColor;
+  border-radius: 15px;
+  overflow: hidden;
+  .profile__owner {
+    background-color: $profileColor;
+    border-radius: 15px;
+    padding: 30px;
+    .profile__img {
+      height: 80px;
+      border: solid 3px white;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    .profile__data {
+      margin-bottom: 45px;
+      .profile__text {
+        font-weight: 300;
+        font-size: 0.8em;
+        display: block;
+        color: $color4;
+      }
+      .profile__name {
+        font-size: 2em;
+        font-weight: 300;
+      }
+    }
+  }
+  .info__time {
+    padding: 25px 30px;
+    list-style: none;
+    font-weight: 300;
+    li {
+      margin-bottom: 20px;
+      font-size: 0.9em;
+      transition: ease 0.5ms;
+      &:hover {
+        cursor: pointer;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right 15px top -15px;
+  .card__options {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+
+    &:hover {
+      cursor: pointer;
+      filter: contrast(4);
+    }
+  }
+  .card__inner {
+    margin-top: 40px;
+    padding: 25px 30px;
+    background: $cardColor;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    .card__top {
+      display: flex;
+      justify-content: space-between;
+      .card__title {
+        font-weight: 400;
+        margin-bottom: 18px;
+        transition: ease 0.5ms;
+      }
+    }
+    .card__content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .card__current-time {
+      font-size: 3em;
+      display: block;
+      font-weight: 300;
+      margin-bottom: 5px;
+      transition: opacity 0.5s;
+    }
+    .card__previous-time {
+      font-size: 0.8em;
+      font-weight: 300;
+      color: $color4;
+      transition: opacity 0.5s;
+    }
+
+    &:hover {
+      background-color: $activeCard;
+      transition: ease 0.5ms;
+      cursor: pointer;
+    }
+  }
+}
+
+.animation {
+  opacity: 0;
+}
+
+.active {
+  color: $color;
+  transition: ease 0.5ms;
+}
+
+.card--work {
+  background-color: $work;
+  background-image: url(./images/icon-work.svg);
+}
+.card--exercise {
+  background-color: $exercise;
+  background-image: url(./images/icon-exercise.svg);
+}
+.card--play {
+  background-color: $play;
+  background-image: url(./images/icon-play.svg);
+}
+.card--selfcare {
+  background-color: $selfcare;
+  background-image: url(./images/icon-self-care.svg);
+}
+.card--social {
+  background-color: $social;
+  background-image: url(./images/icon-social.svg);
+}
+.card--study {
+  background-color: $study;
+  background-image: url(./images/icon-study.svg);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: auto;
+    position: relative;
+  }
+  .container {
+    margin: 80px 0;
+    grid-template-columns: 330px;
+    grid-template-rows: auto;
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+  .profile {
+    grid-row-end: 1;
+    .profile__owner {
+      display: flex;
+      align-items: center;
+      padding: 32px 30px;
+      .profile__img {
+        margin-bottom: 0;
+        height: 70px;
+      }
+      .profile__data {
+        padding-left: 20px;
+        margin-bottom: 0;
+        .profile__text {
+          font-size: 0.85em;
+          margin-bottom: 5px;
+        }
+        .profile__name {
+          font-size: 1.3em;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    .info__time {
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      .info__time-option {
+        margin-bottom: 0;
+        font-size: 0.95em;
+      }
+    }
+  }
+  .card {
+    .card__inner {
+      padding: 25px;
+      .card__top {
+        .card__title {
+          margin-bottom: 5px;
+        }
+      }
+      .card__content {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__current-time {
+        font-size: 1.9em;
+        margin-bottom: 0;
+      }
+      .card__previous-time {
+        font-size: 0.9em;
+      }
+    }
+    .card__options {
+      right: 25px;
+    }
+  }
+}

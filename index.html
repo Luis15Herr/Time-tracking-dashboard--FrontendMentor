@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <div class="profile__owner">
+          <img class="profile__img" src="./images/image-jeremy.png" />
+          <div class="profile__data">
+            <span class="profile__text">Report for</span>
+            <span class="profile__name">
+              Jeremy <br />
+              Robson
+            </span>
+          </div>
+        </div>
+        <ul class="info__time">
+          <li class="info__time-option active" onclick="changeCards('daily')">
+            Daily
+          </li>
+          <li class="info__time-option" onclick="changeCards('weekly')">
+            Weekly
+          </li>
+          <li class="info__time-option" onclick="changeCards('monthly')">
+            Monthly
+          </li>
+        </ul>
+      </div>
+      <div class="card card--work">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--play">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--study">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--exercise">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--social">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="card card--selfcare">
+        <span class="card__options">
+          <img src="/images/icon-ellipsis.svg" alt="3 Dots menu" />
+        </span>
+        <div class="card__inner">
+          <div class="card__top">
+            <span class="card__title">Work</span>
+          </div>
+          <div class="card__content">
+            <span class="card__current-time"> 32hrs </span>
+            <span class="card__previous-time">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+  <footer>
+    <script src="./data.json"></script>
+    <script src="./js.js"></script>
+  </footer>
+</html>

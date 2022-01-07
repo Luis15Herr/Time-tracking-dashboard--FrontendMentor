@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: #0f1424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 18px;
+  color: white;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 240px 240px 240px 240px;
+      grid-template-columns: 240px 240px 240px 240px;
+  -ms-grid-rows: 225px 225px;
+      grid-template-rows: 225px 225px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1440px;
+  margin: auto;
+}
+
+.profile {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: #1c1f4a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.profile .profile__owner {
+  background-color: #5847eb;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.profile .profile__owner .profile__img {
+  height: 80px;
+  border: solid 3px white;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.profile .profile__owner .profile__data {
+  margin-bottom: 45px;
+}
+
+.profile .profile__owner .profile__data .profile__text {
+  font-weight: 300;
+  font-size: 0.8em;
+  display: block;
+  color: #bdc1ff;
+}
+
+.profile .profile__owner .profile__data .profile__name {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.profile .info__time {
+  padding: 25px 30px;
+  list-style: none;
+  font-weight: 300;
+}
+
+.profile .info__time li {
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  -webkit-transition: ease 0.5ms;
+  transition: ease 0.5ms;
+}
+
+.profile .info__time li:hover {
+  cursor: pointer;
+}
+
+.profile .info__time li:last-child {
+  margin: 0;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right 15px top -15px;
+}
+
+.card .card__options {
+  position: absolute;
+  right: 30px;
+  top: 60px;
+}
+
+.card .card__options:hover {
+  cursor: pointer;
+  -webkit-filter: contrast(4);
+          filter: contrast(4);
+}
+
+.card .card__inner {
+  margin-top: 40px;
+  padding: 25px 30px;
+  background: #1c1f4a;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card .card__inner .card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card__inner .card__top .card__title {
+  font-weight: 400;
+  margin-bottom: 18px;
+  -webkit-transition: ease 0.5ms;
+  transition: ease 0.5ms;
+}
+
+.card .card__inner .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card .card__inner .card__current-time {
+  font-size: 3em;
+  display: block;
+  font-weight: 300;
+  margin-bottom: 5px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.card .card__inner .card__previous-time {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #bdc1ff;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.card .card__inner:hover {
+  background-color: #34397b;
+  -webkit-transition: ease 0.5ms;
+  transition: ease 0.5ms;
+  cursor: pointer;
+}
+
+.animation {
+  opacity: 0;
+}
+
+.active {
+  color: #6f76c8;
+  -webkit-transition: ease 0.5ms;
+  transition: ease 0.5ms;
+}
+
+.card--work {
+  background-color: #ff8c66;
+  background-image: url(./images/icon-work.svg);
+}
+
+.card--exercise {
+  background-color: #4acf81;
+  background-image: url(./images/icon-exercise.svg);
+}
+
+.card--play {
+  background-color: #56c2e6;
+  background-image: url(./images/icon-play.svg);
+}
+
+.card--selfcare {
+  background-color: #f1c65b;
+  background-image: url(./images/icon-self-care.svg);
+}
+
+.card--social {
+  background-color: #7536d3;
+  background-image: url(./images/icon-social.svg);
+}
+
+.card--study {
+  background-color: #ff5c7c;
+  background-image: url(./images/icon-study.svg);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: auto;
+    position: relative;
+  }
+  .container {
+    margin: 80px 0;
+    -ms-grid-columns: 330px;
+        grid-template-columns: 330px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+    row-gap: 25px;
+  }
+  .profile {
+    grid-row-end: 1;
+  }
+  .profile .profile__owner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 32px 30px;
+  }
+  .profile .profile__owner .profile__img {
+    margin-bottom: 0;
+    height: 70px;
+  }
+  .profile .profile__owner .profile__data {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+  .profile .profile__owner .profile__data .profile__text {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+  }
+  .profile .profile__owner .profile__data .profile__name {
+    font-size: 1.3em;
+  }
+  .profile .profile__owner .profile__data .profile__name br {
+    display: none;
+  }
+  .profile .info__time {
+    padding: 25px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .profile .info__time .info__time-option {
+    margin-bottom: 0;
+    font-size: 0.95em;
+  }
+  .card .card__inner {
+    padding: 25px;
+  }
+  .card .card__inner .card__top .card__title {
+    margin-bottom: 5px;
+  }
+  .card .card__inner .card__content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card .card__inner .card__current-time {
+    font-size: 1.9em;
+    margin-bottom: 0;
+  }
+  .card .card__inner .card__previous-time {
+    font-size: 0.9em;
+  }
+  .card .card__options {
+    right: 25px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
