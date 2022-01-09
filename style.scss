@@ -33,8 +33,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 240px 240px 240px 240px;
-  grid-template-rows: 225px 225px;
+  grid-template-columns: repeat(4, 255px);
+  grid-template-rows: 245px 245px;
   column-gap: 30px;
   row-gap: 30px;
   justify-content: center;
@@ -51,23 +51,24 @@ body {
   .profile__owner {
     background-color: $profileColor;
     border-radius: 15px;
-    padding: 30px;
+    padding: 35px 30px;
     .profile__img {
-      height: 80px;
+      height: 85px;
       border: solid 3px white;
       border-radius: 50%;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
     .profile__data {
       margin-bottom: 45px;
       .profile__text {
         font-weight: 300;
-        font-size: 0.8em;
+        font-size: 0.9em;
         display: block;
         color: $color4;
+        margin-bottom: 5px;
       }
       .profile__name {
-        font-size: 2em;
+        font-size: 2.2em;
         font-weight: 300;
       }
     }
@@ -78,14 +79,21 @@ body {
     font-weight: 300;
     li {
       margin-bottom: 20px;
-      font-size: 0.9em;
+      font-size: 1em;
       transition: ease 0.5ms;
+      color: $color;
+      font-weight: 400;
       &:hover {
         cursor: pointer;
+        color: white;
       }
       &:last-child {
         margin: 0;
       }
+    }
+    .active {
+      color: white;
+      transition: ease 0.5ms;
     }
   }
 }
@@ -94,11 +102,11 @@ body {
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
-  background-position: right 15px top -15px;
+  background-position: right 20px top -10px;
   .card__options {
     position: absolute;
     right: 30px;
-    top: 60px;
+    top: 70px;
 
     &:hover {
       cursor: pointer;
@@ -106,8 +114,8 @@ body {
     }
   }
   .card__inner {
-    margin-top: 40px;
-    padding: 25px 30px;
+    margin-top: 45px;
+    padding: 30px;
     background: $cardColor;
     height: 100%;
     border-radius: 15px;
@@ -116,8 +124,8 @@ body {
       display: flex;
       justify-content: space-between;
       .card__title {
-        font-weight: 400;
-        margin-bottom: 18px;
+        font-weight: 500;
+        margin-bottom: 25px;
         transition: ease 0.5ms;
       }
     }
@@ -129,11 +137,11 @@ body {
       font-size: 3em;
       display: block;
       font-weight: 300;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       transition: opacity 0.5s;
     }
     .card__previous-time {
-      font-size: 0.8em;
+      font-size: 0.85em;
       font-weight: 300;
       color: $color4;
       transition: opacity 0.5s;
@@ -149,11 +157,6 @@ body {
 
 .animation {
   opacity: 0;
-}
-
-.active {
-  color: $color;
-  transition: ease 0.5ms;
 }
 
 .card--work {

@@ -6,7 +6,7 @@ let info = [];
 let n = 0;
 let cards = document.querySelectorAll(".card");
 let timeframes = document.querySelectorAll(".info__time-option");
-let prop = "daily";
+let prop = "weekly";
 let cachedTf = document.querySelectorAll(".info__time-option")[0];
 
 function changeCards(val) {
@@ -53,5 +53,5 @@ function view() {
 }
 
 window.onload = function () {
-  view();
+  //view();
 };

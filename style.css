@@ -29,10 +29,10 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 240px 240px 240px 240px;
-      grid-template-columns: 240px 240px 240px 240px;
-  -ms-grid-rows: 225px 225px;
-      grid-template-rows: 225px 225px;
+  -ms-grid-columns: (255px)[4];
+      grid-template-columns: repeat(4, 255px);
+  -ms-grid-rows: 245px 245px;
+      grid-template-rows: 245px 245px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
   row-gap: 30px;
@@ -55,14 +55,14 @@ body {
 .profile .profile__owner {
   background-color: #5847eb;
   border-radius: 15px;
-  padding: 30px;
+  padding: 35px 30px;
 }
 
 .profile .profile__owner .profile__img {
-  height: 80px;
+  height: 85px;
   border: solid 3px white;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .profile .profile__owner .profile__data {
@@ -71,13 +71,14 @@ body {
 
 .profile .profile__owner .profile__data .profile__text {
   font-weight: 300;
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: block;
   color: #bdc1ff;
+  margin-bottom: 5px;
 }
 
 .profile .profile__owner .profile__data .profile__name {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 300;
 }
 
@@ -89,17 +90,26 @@ body {
 
 .profile .info__time li {
   margin-bottom: 20px;
-  font-size: 0.9em;
+  font-size: 1em;
   -webkit-transition: ease 0.5ms;
   transition: ease 0.5ms;
+  color: #6f76c8;
+  font-weight: 400;
 }
 
 .profile .info__time li:hover {
   cursor: pointer;
+  color: white;
 }
 
 .profile .info__time li:last-child {
   margin: 0;
+}
+
+.profile .info__time .active {
+  color: white;
+  -webkit-transition: ease 0.5ms;
+  transition: ease 0.5ms;
 }
 
 .card {
@@ -107,13 +117,13 @@ body {
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
-  background-position: right 15px top -15px;
+  background-position: right 20px top -10px;
 }
 
 .card .card__options {
   position: absolute;
   right: 30px;
-  top: 60px;
+  top: 70px;
 }
 
 .card .card__options:hover {
@@ -123,8 +133,8 @@ body {
 }
 
 .card .card__inner {
-  margin-top: 40px;
-  padding: 25px 30px;
+  margin-top: 45px;
+  padding: 30px;
   background: #1c1f4a;
   height: 100%;
   border-radius: 15px;
@@ -141,8 +151,8 @@ body {
 }
 
 .card .card__inner .card__top .card__title {
-  font-weight: 400;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
   -webkit-transition: ease 0.5ms;
   transition: ease 0.5ms;
 }
@@ -159,13 +169,13 @@ body {
   font-size: 3em;
   display: block;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
 .card .card__inner .card__previous-time {
-  font-size: 0.8em;
+  font-size: 0.85em;
   font-weight: 300;
   color: #bdc1ff;
   -webkit-transition: opacity 0.5s;
@@ -181,12 +191,6 @@ body {
 
 .animation {
   opacity: 0;
-}
-
-.active {
-  color: #6f76c8;
-  -webkit-transition: ease 0.5ms;
-  transition: ease 0.5ms;
 }
 
 .card--work {
