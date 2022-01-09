@@ -6,11 +6,27 @@ let info = [];
 let n = 0;
 let cards = document.querySelectorAll(".card");
 let timeframes = document.querySelectorAll(".info__time-option");
-let prop = "weekly";
-let cachedTf = document.querySelectorAll(".info__time-option")[0];
+let prop = "daily";
+let timeframe = "daily";
+let cachedTf = document.querySelectorAll(".info__time-option")[1];
 
 function changeCards(val) {
   prop = val;
+
+  switch (prop) {
+    case "daily":
+      timeframe = "Day";
+      break;
+    case "weekly":
+      timeframe = "Week";
+      break;
+    case "monthly":
+      timeframe = "Month";
+      break;
+    default:
+      console.log("work");
+      break;
+  }
   view();
 }
 
@@ -37,13 +53,12 @@ function view() {
   cards.forEach((card) => {
     card.querySelector(".card__current-time").classList.add("animation");
     card.querySelector(".card__previous-time").classList.add("animation");
-
     setTimeout(function () {
       card.querySelector(".card__title").innerHTML = info[n].title;
       card.querySelector(".card__current-time").innerHTML =
         info[n].timeframes[prop].current + "hrs";
       card.querySelector(".card__previous-time").innerHTML =
-        "Last week - " + info[n].timeframes[prop].previous + "hrs";
+        "Last " + timeframe + " - " + info[n].timeframes[prop].previous + "hrs";
       card.querySelector(".card__current-time").classList.remove("animation");
       card.querySelector(".card__previous-time").classList.remove("animation");
       n++;
@@ -53,5 +68,7 @@ function view() {
 }
 
 window.onload = function () {
-  //view();
+  view();
+  cachedTf.classList.add("active");
+  changeCards("weekly");
 };
