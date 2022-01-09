@@ -91,8 +91,8 @@ body {
 .profile .info__time li {
   margin-bottom: 20px;
   font-size: 1em;
-  -webkit-transition: ease 0.5ms;
-  transition: ease 0.5ms;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
   color: #6f76c8;
   font-weight: 400;
 }
@@ -100,6 +100,8 @@ body {
 .profile .info__time li:hover {
   cursor: pointer;
   color: white;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .profile .info__time li:last-child {
@@ -108,8 +110,8 @@ body {
 
 .profile .info__time .active {
   color: white;
-  -webkit-transition: ease 0.5ms;
-  transition: ease 0.5ms;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .card {

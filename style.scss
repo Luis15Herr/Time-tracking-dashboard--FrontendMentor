@@ -80,12 +80,13 @@ body {
     li {
       margin-bottom: 20px;
       font-size: 1em;
-      transition: ease 0.5ms;
+      transition: ease 0.5s;
       color: $color;
       font-weight: 400;
       &:hover {
         cursor: pointer;
         color: white;
+        transition: ease 0.5s;
       }
       &:last-child {
         margin: 0;
@@ -93,7 +94,7 @@ body {
     }
     .active {
       color: white;
-      transition: ease 0.5ms;
+      transition: ease 0.5s;
     }
   }
 }
